@@ -9,9 +9,9 @@ part of 'test_class.dart';
 // ignore_for_file: avoid_print, unused_element, unused_local_variable
 
 extension TestClassErrorHandlers on TestClass {
-  void testErrorCatching() {
+  void showAlertErrorCatching(BuildContext context) {
     try {
-      test();
+      showAlert(context);
     } catch (error, stackTrace) {
       if (error is Exception) {
         logError(error, stackTrace);
@@ -19,7 +19,7 @@ extension TestClassErrorHandlers on TestClass {
 
       print(
           '================================================================================================================');
-      print('🔴 ${error.runtimeType} - TestClass.test:');
+      print('🔴 ${error.runtimeType} - TestClass.showAlert:');
       print('Message: $error');
       print('StackTrace: $stackTrace');
       print(
