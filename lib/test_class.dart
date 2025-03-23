@@ -1,4 +1,5 @@
-import 'package:error_handlers_generator/error_handlers_generator.dart';
+import 'package:error_handlers_generator_annotations/error_handlers_generator_annotations.dart';
+import 'package:flutter/material.dart';
 
 part 'test_class.g.dart';
 
@@ -9,7 +10,15 @@ class TestClass {
     ///but we can create class with static const named functions, that can provide some error handling variants
     Exception: logError,
   })
-  void test() {}
+  void showAlert(BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text("Alert with error catching"),
+        duration: const Duration(seconds: 2),
+        backgroundColor: Colors.black.withAlpha(230),
+      ),
+    );
+  }
 }
 
 void logError(dynamic error, StackTrace stackTrace) {

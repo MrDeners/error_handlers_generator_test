@@ -11,15 +11,18 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.8
-  build_runner: ^2.2.0
+  error_handlers_generator_annotations:
+    path: ./error_handlers_generator_annotations
 
-  error_handlers_generator:
-    path: ./error_handlers_generator
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
+  error_handlers_generator:
+    path: ./error_handlers_generator
   flutter_test:
     sdk: flutter
+  build_runner: ^2.2.0
+
 
   flutter_lints: ^5.0.0
 

@@ -1,0 +1,19 @@
+name: error_handlers_generator
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  source_gen: ^2.0.0
+  build_runner: ^2.4.14
+  analyzer: ^7.2.0
+  build: ^2.4.2
+  collection: ^1.15.0
+  error_handlers_generator_annotations:
+    path: ../error_handlers_generator_annotations
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.24.0
